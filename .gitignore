@@ -2,6 +2,10 @@
 # Created by https://www.gitignore.io/api/c,c++
 # Edit at https://www.gitignore.io/?templates=c,c++
 
+### Mac Stuff ###
+
+.DS_Store
+
 ### C ###
 # Prerequisites
 *.d
