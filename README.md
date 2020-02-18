@@ -7,7 +7,7 @@ Made by Sam Daitzman and Dieter Brehm
 Our goal is to create and program a tiny keyboard to make frequent tasks or
 shortcuts easier to access on a computer. It will have eight keys in a 4 column,
 2 row grid, and will connect over usb to a computer. The computer will dictate
-the key-binding through it's operating system, but the keypad firmware will
+the key-binding through its operating system, but the keypad firmware will
 bridge the gap between the key switches and the computer's USB keyboard spec.
 
 Details about the project and what we want to learn from it are in our [proposal
