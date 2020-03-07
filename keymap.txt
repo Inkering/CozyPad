@@ -1,0 +1,19 @@
+Rows
+
+PB0 - Row 2
+PB1 - Row 1
+
+Columns
+
+PF0 - Col 1
+PF2 - Col 2
+PF3 - Col 4
+PF4 - Col 5
+PF5 - Col 6
+PF6 - Col 3
+
+Notes on printing:
+
+* Make inner extrusion longer for tighter fit
+* looser tolerances on the y-z axes
+* hole for reset? or make it easier to remove one side of the case for reset/reflashing firmware
