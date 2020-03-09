@@ -24,7 +24,7 @@ bridge the gap between the key switches and the computer's USB keyboard spec.
 
 ## What We've Done
 So far, we've manufactured the electronics and mechanics of the device, and we've built a simple demo program which fulfills the MVP we sought to make. 
-![photo of the keyboard in use](process-photos/demo1.jpg)
+![photo of the keyboard in use](../process-photos/demo1.jpg)
 
 ## What's Next
 The next step will be to improve our code quality, reach for some stretch goals,
