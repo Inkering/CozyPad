@@ -23,12 +23,19 @@ bridge the gap between the key switches and the computer's USB keyboard spec.
 * WiFi or Bluetooth pairing ability
 
 ## What We've Done
-So far, we've manufactured the electronics and mechanics of the device, and we've built a simple demo program which fulfills the MVP we sought to make. 
+So far, we've manufactured the electronics and mechanics of the device, and we've built a simple demo program which fulfills the MVP we sought to make.
 ![photo of the keyboard in use](../process-photos/demo1.jpg)
 
 ## What's Next
 The next step will be to improve our code quality, reach for some stretch goals,
 and to create additional control layers for the key pad.
+
+### Sam's Next Steps
+
+
+### Dieter's Next Steps
+I'm going to work on the efficiency of data structures and matrix scanning for
+the cozypad, focused on optimizing debounce time, etc.
 
 ## Learning Goals
 ### Sam
@@ -44,7 +51,7 @@ hardware we're working with.
 I want to learn more about C and C++ programming in embedded systems, and about
 how to handle inter-peripheral communication and inter-computer communication.
 
-## What's first
+## What we did first
 * Construct and wire up mvp macropad (1st week of project)
 * Identify microcontroller of choice and locate documentation
 * Sketch out an architecture for what control layers and functionality we want
