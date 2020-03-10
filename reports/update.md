@@ -49,14 +49,48 @@ we've built a simple demo program which fulfills the MVP we sought to make.
 
 ![photo of the keyboard in use](../process-photos/demo1.jpg)
 
+We've also started planning out some different, more advanced forms of input.
+Before we move on, we need to improve our current matrix scanning implementation
+and add some functionality. As an MVP, the keyboard is fully functional right
+now and capable of typing a character or a phrase when a particular button is
+pressed. This is already functionally useful, especially when programmed with
+common phrases, as the firmware is already capable of interfacing with any USB
+port and the keyboard can be programmed with whatever macros its user would find
+most helpful.
+
+As a product, a keyboard with a set list of commonly used phrases (or simply an
+external numpad) is already a desirable object, so we've met a basic level of
+use value by meeting our MVP and now have room to push the project in different
+and interesting directions.
+
 ## What's Next
 
-The next step will be to improve our code quality, reach for some stretch goals, 
-and to create additional control layers for the key pad.
+Our most immediate next step includes sending keyup events separately from
+keydown events. Once we've separated the concept of a keydown from the concept
+of a keyup in our firmware, we'll be able to program more useful functionality.
+Our next step at that point would be to improve reliability and test our
+debounce timing. With these two changes, it'll be possible for us to implement
+keys like modifiers and combinations of keys, along with more interesting key
+press timings.
+
+Once those steps are complete, the next step will be to improve our code
+quality, reach for some stretch goals, and to create additional control layers
+for the key pad.
+
+Some specialized interfaces could include multiple control layers, advanced
+input like direct ASCII byte input, or even onboard modification of macros. In
+advanced keyboard design, we've learned that "layers" essentially refer to
+multiple input modes. For example, we could dedicate two buttons on the right
+to cycling through multiple modes. We've also thought about some interesting
+novel key input modes, like a direct ASCII byte input mode. This would allow the
+person using the macropad to press up to eight buttons at once, with each button
+setting a particular bit in a single ASCII character. In other words, this would
+allow input of every single ASCII character, with the user having to depress the
+keys that correspond to the number of the character they're trying to enter.
 
 ### Sam's Next Steps
 
-I'm going to work on designing a useful interface that allows the keyboard to
+I'm going to work on developing a useful interface that allows the keyboard to
 switch between different modes like byte entry, function keys, arrow keys,
 numpad or similar. Depending on how much time is left in the project, I'll
 implement one or more of these input modes.
@@ -79,6 +113,6 @@ the cozypad, focused on optimizing debounce time, etc.
 
 
 
-[GitHub Repository](https://github.com/Inkering/CozyPad)
+[GitHub Repository](https://github.com/Inkering/CozyPad) // 
 [Trello Board](https://trello.com/b/XE28EbTX/cozypad)
 
