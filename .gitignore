@@ -80,3 +80,8 @@ dkms.conf
 # Executables
 
 # End of https://www.gitignore.io/api/c,c++
+/firmware/.ccls-cache
+/firmware/.ccls-root
+/firmware/.projectile
+.travis.yml
+/firmware/.clang_complete
