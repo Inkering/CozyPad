@@ -4,8 +4,6 @@
 //  * By Sam Daitzman, Dieter Brehm
 //  */
 #include "Arduino.h"
-#include "Keypad.h"
-
 #include <Keypad.h>
 
 const byte ROWS = 5; //four rows
