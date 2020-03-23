@@ -40,7 +40,7 @@ void loop(){
 			Keyboard.write("Omg wait, what if we");
 			break;
 		case '5':
-			Keyboard.write("Basic is Bold. New is Now.");;
+			Keyboard.write("Basic is Bold. New is Now.");
 			break;
 		case '6':
 			Keyboard.write("Well, as a designer,");
