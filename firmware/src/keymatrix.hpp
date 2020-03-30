@@ -17,15 +17,15 @@ public:
   KeySwitch matrix[ROWS][COLS];
 
   // Timing variables
-  unsigned int debounceT;
-  unsigned long lastCheck;
-  unsigned int holdT;
-  unsigned int repeatRate;
+  unsigned int debounceT = 10; // ms
+  unsigned long lastCheck = 0;
+  unsigned int holdT = 500; // ms
+  unsigned int repeatRate ; //?
 
   /*
    * Constructor supporting arbitrary keyboard layers
    */
-  KeyMatrix(char assignments[ROWS][COLS]);
+  KeyMatrix(char assignments[ROWS][COLS], int rowPins[ROWS], int colPins[COLS]);
 
   /*
    * Update DS entries
