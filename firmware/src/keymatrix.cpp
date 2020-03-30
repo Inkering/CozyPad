@@ -1,5 +1,6 @@
 #include "Arduino.h"
 #include "keymatrix.hpp"
+#include "Keyboard.h"
 
 
 KeyMatrix::KeyMatrix(char assignments[ROWS][COLS], int rowPins[ROWS], int colPins[COLS]){
@@ -54,6 +55,29 @@ void KeyMatrix::updateEntries() {
 
 		lastCheck = millis();
 	}
+}
+
+void KeyMatrix::sendEntries() {
+	// assumes an up to date key matrix
+	for (int r=0; r<ROWS; r++) {
+		for (int c=0; c < COLS; c++) {
+			KeySwitch *key = &matrix[r][c];
+			if (key->state == PRESSED) {
+				// if theres something in the first index of the char val for
+				// a key
+				if (key->keyVal[0] != '\0') {
+					Keyboard.write(key->keyVal);
+				}
+
+				// TODO: fill in runner for function variable if it is used
+			}
+		}
+	}
+}
+
+void KeyMatrix::operate() {
+	updateEntries();
+	sendEntries();
 }
 
 void KeyMatrix::setBounce(unsigned int delay) {

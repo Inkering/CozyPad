@@ -19,36 +19,36 @@ typedef enum {
 class KeySwitch {
 public:
 	// value tracking
-	char keyVal[5];
-	void* keyFunc;
+  char keyVal[5] = {'\0','\0','\0','\0','\0'};
+  void *keyFunc;
 
-	// pin set
-	int coords[2] = {0, 0};
+  // pin set
+  int coords[2] = {0, 0};
 
-	// state handling
-	KeyState state = IDLE;
-	bool isChanged = false;
+  // state handling
+  KeyState state = IDLE;
+  bool isChanged = false;
 
-	/*
-	 * Constructor
-	 *
-	 * @param val
-	 * @param coord
-	 */
-	KeySwitch(char val, int coord[2]);
+  /*
+   * Constructor
+   *
+   * @param val
+   * @param coord
+   */
+  KeySwitch(char val, int coord[2]);
 
-	/*
-	 * Constructor for array initialization
-	 */
-	KeySwitch();
+  /*
+   * Constructor for array initialization
+   */
+  KeySwitch();
 
-	/*
-	 * Constructor
-	 *
-	 * @param func
-	 * @param coord
-	 */
-	KeySwitch(void* func, int coord[2]);
+  /*
+   * Constructor
+   *
+   * @param func
+   * @param coord
+   */
+  KeySwitch(void *func, int coord[2]);
 };
 
 #endif
