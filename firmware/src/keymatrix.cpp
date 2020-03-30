@@ -1,3 +1,12 @@
+/**
+ * Cozypad Keyboard Project
+ * keymatrix.cpp
+ * Dieter Brehm, Sam Daitzman
+ * Simple representation of a keyboard matrix,
+ * with scanning, repeat(hold), tapping, N-key rollover, and other
+ * processing.
+ */
+
 #include "Arduino.h"
 #include "keymatrix.hpp"
 #include "Keyboard.h"

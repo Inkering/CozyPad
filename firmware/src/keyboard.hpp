@@ -1,6 +1,6 @@
 /**
  * Cozypad Keyboard Project
- * Keyboard.h
+ * Keyboard.hpp
  * Dieter Brehm, Sam Daitzman
  * Simple representation of a keyboard matrix,
  * with scanning, repeat(hold), tapping, N-key rollover, and other
@@ -17,10 +17,14 @@
 #define ROWS 5
 #define COLS 2
 
+// TODO: where to put design for char assignments and pins? here or main?
+
 class Keyboard {
+	int rowPins[ROWS];
+	int colPins[COLS];
+	char assignments [ROWS][COLS];
 public:
-    Keyboard();
-    
+	Keyboard();
 };
 
 #endif

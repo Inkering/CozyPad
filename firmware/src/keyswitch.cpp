@@ -1,3 +1,10 @@
+/**
+ * Cozypad Keyboard Project
+ * keyswitch.cpp
+ * Dieter Brehm, Sam Daitzman
+ * Simple representation of a keyboard key
+ */
+
 #include "keyswitch.hpp"
 #include "Arduino.h"
 

@@ -1,3 +1,12 @@
+/**
+ * Cozypad Keyboard Project
+ * keymatrix.hpp
+ * Dieter Brehm, Sam Daitzman
+ * Simple representation of a keyboard matrix,
+ * with scanning, repeat(hold), tapping, N-key rollover, and other
+ * processing.
+ */
+
 #ifndef KEYMATRIX_H
 #define KEYMATRIX_H
 
