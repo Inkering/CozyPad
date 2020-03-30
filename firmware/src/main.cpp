@@ -4,7 +4,6 @@
 //  * By Sam Daitzman, Dieter Brehm
 //  */
 #include "Arduino.h"
-// #include "Keypad.h"
 #include "Keyboard.h"
 
 // store desired characters to send to computer upon press in 2D array
@@ -19,14 +18,14 @@
 
 void setup(){
 	// example array
-	char aMatrix[2][ROWS][COLS] = {
-		{
-			{'a', 'b'}, {'c', 'd'}
-		},
-		{
-			{'1', '2'}, {'3', '4'}
-		}
-	};
+	// char aMatrix[2][ROWS][COLS] = {
+	// 	{
+	// 		{'a', 'b'}, {'c', 'd'}
+	// 	},
+	// 	{
+	// 		{'1', '2'}, {'3', '4'}
+	// 	}
+	// };
 }
 
 void loop(){
