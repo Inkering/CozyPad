@@ -17,14 +17,23 @@
 #define ROWS 5
 #define COLS 2
 
-// TODO: where to put design for char assignments and pins? here or main?
-
-class Keyboard {
-	int rowPins[ROWS];
-	int colPins[COLS];
-	char assignments [ROWS][COLS];
+class KeyboardController {
 public:
-	Keyboard();
+  int rowPins[ROWS] = {21, 20, 17, 19, 18};
+  int colPins[COLS] = {0,1};
+  char assignments[ROWS][COLS] = {
+		{'1', '2'},
+		{'3', '4'},
+		{'5', '6'},
+		{'7', '8'},
+		{'9', '0'}
+	};
+
+	KeyMatrix masterMatrix = KeyMatrix(assignments, rowPins, colPins);
+
+	KeyboardController();
+
+	void boardLoop();
 };
 
 #endif

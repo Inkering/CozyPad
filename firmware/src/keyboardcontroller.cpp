@@ -6,9 +6,8 @@
  * with scanning, repeat(hold), tapping, N-key rollover, and other
  * processing.
  */
-
 #include "Arduino.h"
-#include "keyboardcontroller.hpp"
+#include "keyboard.hpp"
 
 KeyboardController::KeyboardController() {}
 
