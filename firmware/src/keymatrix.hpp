@@ -20,6 +20,7 @@
  * Handles USB-char sending, debouncing, and electronic
  * matrix value collection.
  */
+
 class KeyMatrix {
 public:
 	// data storage of key object

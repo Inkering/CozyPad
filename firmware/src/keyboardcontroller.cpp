@@ -7,7 +7,7 @@
  * processing.
  */
 #include "Arduino.h"
-#include "keyboard.hpp"
+#include "keyboardcontroller.hpp"
 
 KeyboardController::KeyboardController() {}
 
