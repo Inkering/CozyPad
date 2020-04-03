@@ -5,7 +5,6 @@
 //  */
 #include "Arduino.h"
 #include "keyboardcontroller.hpp"
-#include "Keyboard.h"
 
 KeyboardController cozyPad = KeyboardController();
 
