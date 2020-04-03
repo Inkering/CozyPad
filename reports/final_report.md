@@ -80,7 +80,7 @@ Our library is split into several components. Beginning at the user-visible main
 	- The `updateEntries` method of the `KeyMatrix` class scans the physical key/diode matrix and updates key values in the data structure
 	- The `sendEntries` method of the `KeyMatrix` class reads all key states and sends the desired characters. Still to be implemented is a check that supports arbitrary function handlers for each key, for more advanced keypress functionality/
 	- The `operate` method of the `KeyMatrix` class performs one loop iteration of all operations necessary to scan the keyboard diode matrix and sent the appropriate keycodes over USB HID to the computer.
-6. Upon initialization, the `KeyMatrix` class contains a 2x2 matrix of `KeySwitch` class instances from the [`keyswitch.cpp`](../firmware/src/keyswitch.cpp) and [`keyswitch.hpp`](../firmware/src/keyswitch.cpp) header files.
+6. Upon initialization, the `KeyMatrix` class contains a 2x2 matrix of `KeySwitch` class instances from the [`keyswitch.cpp`](../firmware/src/keyswitch.cpp) and [`keyswitch.hpp`](../firmware/src/keyswitch.hpp) header files.
 7. The `KeySwitch` class allows for specific operations or key values to be directly bound to it. Currently implemented is support for direct character binding, like how most traditional keyboards work. The class also contains a `KeyState` struct, which tracks the state of the button for near-future reference. Because all of the keys are scanned in each matrix scan and each key stores this data, our code can natively support n-key rollover.
 8. The `KeyState` struct tracks whether each key is in `IDLE`, `PRESSED`, `HOLD` or `RELEASED` state.
 
