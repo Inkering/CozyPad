@@ -58,7 +58,7 @@ int rowPins[ROWS] = {21, 20, 17, 19, 18};
 		{'9', '0'}
 	};
 ```
-*Above: Sample header code for declaring board pinout bindings.*
+*Above: Sample header code for declaring board pinout bindings in [firmware/src/keymatrix.cpp](firmware/src/keymatrix.cpp)*
 
 We included configuration header files in our library that an implementer can edit as desired to make the library adapt to their own layout. By making this modular and adopting a single point of declaration, we don't bind the library to any specific hardware and make it easier to make future changes to the structure of the matrix scan. This is especially important for customizing a keypad, where I/O is crucial and may be limited.
 
@@ -144,7 +144,6 @@ KeyMatrix::KeyMatrix(char assignments[ROWS][COLS], int rowPins[ROWS], int colPin
 The `KeyMatrix` datastructure initializer fills in key assignments and pin coordinates inline across all keys, and these values are used in regular operation of the keyboard once they are stored. Because this implementation centralizes each key's configuration and state in a single state machine, code that consumes that configuration and state can behave (and be debugged) predictably. Here, we are parsing the keyboard setup passed from configuration header files and initializing the `KeyMatrix` datastructure.
 
 ## Project Outcomes
-*7) Reflect on the outcome of the project in terms of your learning goals.  Between the lower and upper bounds you identified in the proposal, where did your project end up?  Did you achieve your learning goals?*
 
 In spite of the jarring transition to digital Olin and the ongoing circumstances affecting Sam, we finished all of our minimum goals for success early in the project and set up a foundation for continuing work after the deadline to complete our stretch goals. We learned more about good C++ library design, challenged our initial assumptions about how to represent keyboard state, and met our learning goals.
 
