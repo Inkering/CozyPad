@@ -12,3 +12,5 @@ bridge the gap between the key switches and the computer's USB keyboard spec.
 
 Details about the project and what we want to learn from it are in our [proposal
 document](reports/proposal.md). A pdf of the same proposal is [here](reports/proposal.pdf).
+
+You can see our [final report](reports/final_report.md) to learn about the current status of this project.
