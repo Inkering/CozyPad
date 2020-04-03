@@ -93,6 +93,8 @@ To avoid these pitfalls, we chose to rely on a single standard datastructure tha
 Here are a few core examples of how our implementation allows for flexible development of a keypad like ours.
 
 ### Matrix Scanning Code
+*For complete sourcecode from this file see [keymatrix.cpp](../firmware/src/keymatrix.cpp)*
+
 ```C++
 void KeyMatrix::updateEntries() {
 	if (( millis() - lastCheck) > debounceT) {
@@ -128,6 +130,8 @@ void KeyMatrix::updateEntries() {
 The above code (with row scanning implementation details omitted for brevity) looks over each row and column of the matrix efficiently, sending row and column pulses to address individual keyswitches one at a time, and stores readings in a reusable `KeyMatrix` class datastructure that the rest of the library is built around. By separating this from the actual USB sending implementation, we allow the library consumer to implement their own output for different hardware, or use the keypad values entirely differently than how we would. An important detail here is that the `KeyMatrix` datastructure contains all information necessary to implement the matrix scanner, including pinout and a unified coordinate system for all information the scanner needs to store.
 
 ### Keypress Data Structure Implementation
+*For complete sourcecode from this file see [keymatrix.cpp](../firmware/src/keymatrix.cpp)*
+
 ```C++
 KeyMatrix::KeyMatrix(char assignments[ROWS][COLS], int rowPins[ROWS], int colPins[COLS]){
 	// initalize the coordinate values of the keymatrix
