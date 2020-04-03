@@ -58,8 +58,7 @@ int rowPins[ROWS] = {21, 20, 17, 19, 18};
 		{'9', '0'}
 	};
 ```
-*Above: Sample header code for declaring board pinout bindings in [firmware/src/keymatrix.hpp](../firmware/src/keymatrix.hpp)*
-
+*Above: Sample header code for declaring board pinout bindings in [firmware/src/keyboardcontroller.hpp](../firmware/src/keyboardcontroller.hpp)*
 We included configuration header files in our library that an implementer can edit as desired to make the library adapt to their own layout. By making this modular and adopting a single point of declaration, we don't bind the library to any specific hardware and make it easier to make future changes to the structure of the matrix scan. This is especially important for customizing a keypad, where I/O is crucial and may be limited.
 
 While this section would typically include output from our program, that output is absent here because our program's output takes place over a USB HID connection.
@@ -75,9 +74,9 @@ Our library is split into several components. Beginning at the user-visible main
 
 1. The library is included in an existing program designed for an Arduino.h-compatible AVR chip or similar. In our case, we implement using a Teensy to show that Arduino-compatibles will work as well. The library is imported as `#include "keyboardcontroller.hpp"`.
 2. The implementer introduces a new `KeyboardController` instance, named cozypad in our demo code, and calls its method `boardLoop` regularly during free time to run matrix scanning and send keycodes.
-3. `keyboardcontroller.hpp` declares the basic keyboard implementation details such as pin/row/column arrangements, and declares a `KeyMatrix` instance we call `MasterMatrix`, with the necessary looping code.
+3. [`keyboardcontroller.hpp`](../firmware/src/keyboardcontroller.hpp) declares the basic keyboard implementation details such as pin/row/column arrangements, and declares a `KeyMatrix` instance we call `MasterMatrix`, with the necessary looping code.
 4. The `keymatrix.hpp` header file includes matrix scanning configuration code, such as debounce and key hold timing. This is another implementer-customizable header that can be used to configure the keyboard as desired.
-5. The `keymatrix.cpp` source file is the core of our matrix scanning strategy, and respects a single shared datastructure  (mentioned below) across all operations.
+5. The [`keymatrix.cpp`]((../firmware/src/keyboardcontroller.cpp)) source file is the core of our matrix scanning strategy, and respects a single shared datastructure  (mentioned below) across all operations.
 	- The `updateEntries` method of the `KeyMatrix` class scans the physical key/diode matrix and updates key values in the data structure
 	- The `sendEntries` method of the `KeyMatrix` class reads all key states and sends the desired characters. Still to be implemented is a check that supports arbitrary function handlers for each key, for more advanced keypress functionality/
 	- The `operate` method of the `KeyMatrix` class performs one loop iteration of all operations necessary to scan the keyboard diode matrix and sent the appropriate keycodes over USB HID to the computer.
