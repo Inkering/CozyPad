@@ -58,7 +58,7 @@ int rowPins[ROWS] = {21, 20, 17, 19, 18};
 		{'9', '0'}
 	};
 ```
-*Above: Sample header code for declaring board pinout bindings in [firmware/src/keymatrix.cpp](../firmware/src/keymatrix.cpp)*
+*Above: Sample header code for declaring board pinout bindings in [firmware/src/keymatrix.hpp](../firmware/src/keymatrix.hpp)*
 
 We included configuration header files in our library that an implementer can edit as desired to make the library adapt to their own layout. By making this modular and adopting a single point of declaration, we don't bind the library to any specific hardware and make it easier to make future changes to the structure of the matrix scan. This is especially important for customizing a keypad, where I/O is crucial and may be limited.
 
